@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+Crypto Market Dashboard - Demo
 
-First, run the development server:
+یک داشبورد نمایش اطلاعات ارزهای دیجیتال با React، Next.js و MUI که به صورت realtime اطلاعات را از API دریافت و در جدول‌ها، باکس‌ها و نمودارها نمایش می‌دهد.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+ ویژگی‌ها
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+نمایش لیست ارزهای دیجیتال با اطلاعات کامل شامل قیمت، تغییرات 1h/24h/7d، حجم معاملات و مارکت کپ.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+جستجوی کوین‌ها بر اساس نام.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Pagination و Show More:
 
-## Learn More
+Pagination برای مرور صفحات.
 
-To learn more about Next.js, take a look at the following resources:
+Show More برای بارگذاری کوین‌ها به صورت بسته‌های 10/50 تایی جدا از Pagination.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Overview Cards با اطلاعات مهم بازار:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Total Market Cap (با فرمت میلیارد و تریلیون)
 
-## Deploy on Vercel
+24h Trading Volume
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+BTC Dominance
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Active Cryptos
+
+Skeleton Loading برای کامپوننت‌ها هنگام لود شدن داده‌ها.
+
+طراحی ریسپانسیو با MUI و CSS سفارشی.
+
+استفاده از Redux (خام) برای مدیریت state گلوبال، مانند totalCount تعداد ارزهای فعال.
+
+IndexedDB برای ذخیره و خواندن داده‌های کش شده در مرورگر.
+
+Next.js API routes برای fetch داده‌ها و محافظت با API Key.
+
+ تکنولوژی‌ها و کتابخانه‌ها
+
+Next.js
+ - فریمورک React برای SSR و API Routes
+
+React
+ - کتابخانه‌ی اصلی UI
+
+Redux
+ - مدیریت State
+
+Material UI (MUI)
+ - برای جدول‌ها، Box و Skeleton
+
+IndexedDB
+ - ذخیره‌سازی داده‌ها در مرورگر
+
+
+
+CSS Modules + Global CSS - برای استایل 
+
+ ساختار پروژه
+/app
+  /components
+    /coin-table
+      CoinTable.jsx
+      CoinRow.jsx
+    /overview
+      OverviewCard.jsx
+      OverviewCards.jsx
+    /ui
+      SearchBar.jsx
+      Button.jsx
+    /pagination
+      Pagination.jsx
+      ShowMoreButton.jsx
+    MenuContainer.jsx
+    HeaderLogoBadge.jsx
+  /hooks
+    useCoins.js
+  /db
+    indexeddb.js
+  /pages/api
+    coins.js
+/styles
+  global.css
+  ...
+
+
+components: شامل تمام UI components و کامپوننت‌های جدول و overview.
+
+hooks/useCoins.js: مدیریت fetch، ذخیره و state محلی کوین‌ها.
+
+db/indexeddb.js: مدیریت IndexedDB برای کش داده‌ها.
+
+pages/api/coins.js: مسیر API برای دریافت اطلاعات از CoinMarketCap API.
+
+styles: CSS global و CSS Modules.                                                                                                           
+
+راه‌اندازی پروژه : 
+1-npm install
+2-npm run dev
+

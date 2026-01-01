@@ -1,0 +1,25 @@
+.buttonState {
+    background-color: #144a97;
+    border-radius: 1000px;
+    width: 100%;
+    border: none;
+    padding: 11px;
+    color: #ffff;
+    font-size: 12px;
+    
+
+  }
+  .buttonState:hover {
+    background-color: #1357b7;
+  }
+  
+  .disabledButton {
+    background-color: #79a9ee;
+    opacity: 0.7;
+    color: #ffff;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 1000px;
+  }
+  

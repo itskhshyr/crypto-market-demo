@@ -1,0 +1,13 @@
+.InputState{
+    border: 1px solid #E2E8F0;
+    border-radius: 1000px;
+    width: 100%;
+    padding: 8px;
+    padding-left: 10px;
+    outline: none;
+}
+.InputState:hover{
+    background-color: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    cursor: auto;
+}

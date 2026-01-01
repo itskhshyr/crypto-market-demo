@@ -1,0 +1,232 @@
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* ===== Colors ===== */
+  --color-bg: #ffffff;
+  --color-text-primary: #111827;
+  --color-text-secondary: #a1a2a3;
+  --color-border: #e5e7eb;
+  --color-positive: #16a34a;
+  --color-negative: #dc2626;
+
+  /* ===== Font sizes ===== */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xxl: 24px;
+
+  /* ===== Font weights ===== */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* ===== Spacing ===== */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+
+  /* ===== Radius ===== */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  /* ===== MUI table ===== */
+  --table-bg: #ffffff;
+  --table-header-bg: #f9fafb;
+  --table-border: #e5e7eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: jakartaRegular;
+  src: url("../../public/font/PlusJakartaSans-Regular.ttf");
+}
+@font-face {
+  font-family: jakartaMedium;
+  src: url("../../public/font/PlusJakartaSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: jakartaBold;
+  src: url("../../public/font/PlusJakartaSans-Bold.ttf");
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  color: var(--foreground);
+  font-family: jakartaRegular !important;
+  background-color: rgb(255, 255, 255) !important;
+  font-size: var(--font-md);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.text-sm {
+  font-size: var(--font-sm);
+}
+
+.text-xs {
+  font-size: var(--font-xs);
+}
+.text-lg {
+  font-size: var(--font-lg);
+}
+.text-xxl {
+  font-size: var(--font-xxl);
+}
+
+.text-muted {
+  color: var(--color-text-secondary);
+}
+
+.text-positive {
+  color: var(--color-positive);
+}
+
+.text-negative {
+  color: var(--color-negative);
+}
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ===== Table ===== */
+.table-header {
+  font-size: var(--font-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text-secondary);
+}
+
+.table-cell {
+  font-size: var(--font-sm);
+  font-weight: var(--fw-regular);
+}
+
+.table-coin {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.table-symbol {
+  font-size: var(--font-xs);
+  color: var(--color-text-secondary);
+}
+
+.table-rank {
+  color: var(--color-text-secondary);
+}
+
+
+
+@media (max-width: 768px) {
+  /* dashboard menu stack */
+  .dashboard-menu {
+    background-color: #f1f5f9;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .show-more-button{
+    font-size: 10px !important;
+    text-wrap: nowrap;
+  }
+  .pagination-description{
+    font-size: 10px !important;
+  }
+}
+/* dashboard menu stack */
+.dashboard-menu {
+  background-color: #f1f5f9;
+  border-radius: 100px;
+  width: max-content;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.dashboard-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  color: #64748b;
+  gap: 24px;
+}
+
+.dashboard-menu li a {
+  text-decoration: none;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.dashboard-menu li.active a {
+  color: #020617;
+  background-color: #ffff;
+  padding: 6px 12px;
+  border-radius: 100px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.date-dashboard-style {
+  font-size: 12px;
+  font-family: mediumJakarta;
+  font-weight: 500;
+}
+
+.show-more-button{
+  background-color: #e2e2e2;
+  color: #171717;
+  border: none;
+  border-radius: 1000px;
+}
+.show-more-button:hover{
+  background-color: #9b9b9b;
+  color: #fff;
+}
